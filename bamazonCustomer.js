@@ -73,6 +73,7 @@ function choseProduct(){
         selectedProduct();
       }
     }
+    console.log(chosenProduct);
     // showProducts();
   });
 });
@@ -136,8 +137,9 @@ function selectedProduct(questions, res) {
           }
           else{
             console.log("--------------------------------");
-            console.log("Sorry, looks like we only have", res[0].stock_quantity, "in stock!");
-          }
+            console.log("Sorry, looks like we only have", res[0].stock_quantity, "in stock!\n");
+            choseProduct();
+            }
         // }
           // checkInventory(product);
         });
